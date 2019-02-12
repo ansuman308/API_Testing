@@ -1,0 +1,547 @@
+{
+	"info": {
+		"_postman_id": "4ec50953-c380-4dae-8d22-21485bba61c8",
+		"name": "Relativity Webedsc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REST - Workspaces",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/relativity.rest/relativity/workspace?",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"relativity.rest",
+						"relativity",
+						"workspace"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST - Workspace - SW2.0 Testing 4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/relativity.rest/relativity/workspace/2236184?",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"relativity.rest",
+						"relativity",
+						"workspace",
+						"2236184"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST - Fields - SW2.0 Testing 4",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password.90",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "rgoyal@deloitte.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"condition\":\" 'Object Type' == 10 \", \"fields\":[\"*\"]}\n"
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/relativity.rest/workspace/7493343/field/queryresult?",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"relativity.rest",
+						"workspace",
+						"7493343",
+						"field",
+						"queryresult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kepler Object Manager - Workspaces",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request\": {\n        \"objectType\": {\n            \"name\": \"Workspace\"\n        },\n        \"fields\": [\n            {\n                \"name\": \"Name\"\n            },\n            {\n                \"name\": \"Status\"\n            },\n            {\n                \"name\": \"Client Name\"\n            }\n        ]\n    },\n    \"start\": 0,\n    \"length\": 0\n}"
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/Relativity.REST/api/Relativity.Objects/workspace/-1/object/queryslim",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"Relativity.REST",
+						"api",
+						"Relativity.Objects",
+						"workspace",
+						"-1",
+						"object",
+						"queryslim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kepler Object Manager - Fields - SW2.0 Testing 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"request\":{\r\n      \"objectType\":{\r\n         \"name\":\"Field\"\r\n      },\r\n      \"fields\":[\r\n    \t{\r\n    \t\t\"name\":\"Artifact ID\"\r\n    \t},\r\n    \t{\r\n      \t\t\"name\":\"Field Type\"\r\n    \t},\r\n    \t{\r\n      \t\t\"name\":\"Name\"\r\n    \t}\r\n      ],\r\n      \"condition\":\"'Object Type' LIKE 'Document'\"\r\n   },\r\n   \"start\":0,\r\n   \"length\":0\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/Relativity.REST/api/Relativity.Objects/workspace/2236184/object/queryslim",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"Relativity.REST",
+						"api",
+						"Relativity.Objects",
+						"workspace",
+						"2236184",
+						"object",
+						"queryslim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kepler Object Query Module - Fields - SW2.0 Testing 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"workspaceId\": 2236184,\r\n   \"artifactTypeId\": 14,\r\n   \"query\": {\r\n   \t\t\"fields\": [\"*\"]\r\n\t},\r\n\t\"start\": 1,\r\n\t\"length\": 0,\r\n\t\"includePermissions\": [],\r\n    \"queryToken\": \"\"\r\n   }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/Relativity.REST/api/Relativity.Services.ObjectQuery.IObjectQueryModule/Object%20Query%20Manager/QueryAsync",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"Relativity.REST",
+						"api",
+						"Relativity.Services.ObjectQuery.IObjectQueryModule",
+						"Object%20Query%20Manager",
+						"QueryAsync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REST - Field Information using Field ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password.90",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "rgoyal@deloitte.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/Relativity.REST/Workspace/7493343/Field/1003668",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"Relativity.REST",
+						"Workspace",
+						"7493343",
+						"Field",
+						"1003668"
+					]
+				},
+				"description": "To get field Information"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Test script to validate Json fields in Single workspace",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1241ae91-28da-41c6-b7e4-d5df5eb970b6",
+						"exec": [
+							"// To check response code\r",
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"//Check response time\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1100);\r",
+							"});\r",
+							"// Check response body\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     // assert that the status code is 200\r",
+							"     pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants\r",
+							"     // assert that the response has a valid JSON body\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json; // this assertion also checks if a body  exists, so the above check is not needed\r",
+							"});\r",
+							"//To validate the Json Body\r",
+							"pm.test(\"Response validate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Name).to.eql(\"Rel_Dist_26062012\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4e734020-bedb-4ed0-885b-4215bdb79105",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password.90",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "rgoyal@deloitte.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com/Relativity.REST/Relativity/Workspace/1668312",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"Relativity.REST",
+						"Relativity",
+						"Workspace",
+						"1668312"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create Field using Field name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e5e66a05-160d-4e28-8824-a25fbc35f096",
+						"exec": [
+							"pm.test(\"response is created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"//Check response time\r",
+							"pm.test(\"Response time is less than 10000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10000);\r",
+							"});\r",
+							"// Check response body\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.json; // this assertion also checks if a body  exists, so the above check is not needed\r",
+							"});\r",
+							"//To validate the Json Body\r",
+							"pm.test(\"Response validate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.Results[0].Message).to.have.string(\"created successfully.\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password.90",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "rgoyal@deloitte.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-Header",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Artifact Type Name\": \"Field\",\r\n  \"Name\": \"Synopsis23\",\r\n  \"Parent Artifact\": {\r\n    \"Artifact ID\": 1017931\r\n  },\r\n  \"Object Type\": {\r\n    \"Descriptor Artifact Type ID\": 10\r\n  },\r\n  \"Field Type ID\": 4,\r\n  \"Is Required\": false,\r\n  \"Include in Text Index\": false,\r\n  \"Unicode\": true,\r\n  \"Allow HTML\": true,\r\n  \"Open to Associations\": true,\r\n  \"Allow Sort/Tally\": false,\r\n  \"Wrapping\": true,\r\n  \"Linked\": true,\r\n  \"Allow Group By\": true,\r\n  \"Allow Pivot\": true,\r\n  \"Ignore Warnings\": true,\r\n  \"Available In Viewer\": true,\r\n  \"Width\": 123\r\n}"
+				},
+				"url": {
+					"raw": "https://relativitywebapiedsc.dev-sltc.com//Relativity.REST/Workspace/7493343/Field",
+					"protocol": "https",
+					"host": [
+						"relativitywebapiedsc",
+						"dev-sltc",
+						"com"
+					],
+					"path": [
+						"",
+						"Relativity.REST",
+						"Workspace",
+						"7493343",
+						"Field"
+					]
+				},
+				"description": "dfdsa"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Password.1",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "RelAutomation@kcura.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "977adad7-a3db-436b-8184-7e3d0b9d15c5",
+				"type": "text/javascript",
+				"exec": [
+					"console.log('fvdasghfasdjh');"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f4b97997-93f4-4a67-9672-239ee9ac336e",
+				"type": "text/javascript",
+				"exec": [
+					"console.log('Relativity test scripts');"
+				]
+			}
+		}
+	]
+}
